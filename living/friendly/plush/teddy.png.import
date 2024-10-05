@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cun70wjwfd2wt"
-path="res://.godot/imported/Olivia.png-4641d2d2e59b6381110d397cce1eda7a.ctex"
+uid="uid://diecd3i7yohun"
+path="res://.godot/imported/teddy.png-cf302dfd126f6c09276769e86a802df4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://friendly/main_char/Olivia.png"
-dest_files=["res://.godot/imported/Olivia.png-4641d2d2e59b6381110d397cce1eda7a.ctex"]
+source_file="res://living/friendly/plush/teddy.png"
+dest_files=["res://.godot/imported/teddy.png-cf302dfd126f6c09276769e86a802df4.ctex"]
 
 [params]
 

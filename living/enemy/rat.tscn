@@ -1,0 +1,90 @@
+[gd_scene load_steps=12 format=3 uid="uid://c0g1ek12cq64"]
+
+[ext_resource type="Texture2D" uid="uid://bodb8147gotrw" path="res://living/enemy/rat.png" id="1_1quh2"]
+[ext_resource type="Script" path="res://living/enemy/rat.gd" id="1_iabdb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw6t4"]
+atlas = ExtResource("1_1quh2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jypxc"]
+atlas = ExtResource("1_1quh2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vvuo"]
+atlas = ExtResource("1_1quh2")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bod22"]
+atlas = ExtResource("1_1quh2")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ejlc"]
+atlas = ExtResource("1_1quh2")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jvrl"]
+atlas = ExtResource("1_1quh2")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rqwf"]
+atlas = ExtResource("1_1quh2")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6l6ed"]
+atlas = ExtResource("1_1quh2")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pb106"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xw6t4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jypxc")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vvuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bod22")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ejlc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jvrl")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rqwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6l6ed")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[node name="Rat" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_pb106")
+animation = &"walk_down"
+frame = 1
+frame_progress = 0.754148
+script = ExtResource("1_iabdb")

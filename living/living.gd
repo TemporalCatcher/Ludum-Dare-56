@@ -1,37 +1,25 @@
 extends AnimatedSprite2D
-class_name Plush
+class_name  Living
 
-var leader : Olivia = null
 var facing := Vector2.DOWN
-
-func _ready() -> void:
-	play(&"idle_down")
-
-func _physics_process(delta: float) -> void:
-	if leader == null:
-		return
-	var vect := (leader.position - position).normalized()
-	var distance := position.distance_squared_to(leader.position)
-	if distance < 400:
-		idle_direction()
-		return
-	position += vect * min(distance / 4, 50) * delta
-	walk_direction(vect)
 
 
 func  walk_direction(vect : Vector2) -> void:
 	var vect2 := vect.abs()
+	var face : Vector2
 	if vect2.x >= vect2.y: # horizontal facing
 		if vect.x < 0:
-			facing = Vector2.LEFT
+			face = Vector2.LEFT
 		else:
-			facing = Vector2.RIGHT
+			face = Vector2.RIGHT
 	else:
 		if vect.y < 0:
-			facing = Vector2.UP
+			face = Vector2.UP
 		else:
-			facing = Vector2.DOWN
-	
+			face = Vector2.DOWN
+	if face == facing and animation.begins_with("walk"):
+		return
+	facing = face
 	match  facing:
 		Vector2.RIGHT:
 			play(&"walk_right")

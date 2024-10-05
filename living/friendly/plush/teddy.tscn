@@ -1,7 +1,7 @@
 [gd_scene load_steps=44 format=3 uid="uid://dno5lfk65lty1"]
 
-[ext_resource type="Texture2D" uid="uid://diecd3i7yohun" path="res://friendly/plush/Teddy.png" id="1_44m8h"]
-[ext_resource type="Script" path="res://friendly/plush/plush.gd" id="2_s1e4r"]
+[ext_resource type="Texture2D" uid="uid://diecd3i7yohun" path="res://living/friendly/plush/teddy.png" id="1_44m8h"]
+[ext_resource type="Script" path="res://living/friendly/plush/plush.gd" id="2_s1e4r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3awsw"]
 atlas = ExtResource("1_44m8h")
@@ -358,9 +358,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+[node name="Teddy" type="AnimatedSprite2D"]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_u8d0s")
 animation = &"walk_up"
-frame_progress = 0.908834
+frame_progress = 0.0644988
 script = ExtResource("2_s1e4r")

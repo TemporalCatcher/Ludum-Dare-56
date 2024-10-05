@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcu7iymu0ui77"]
-
-[ext_resource type="Texture2D" uid="uid://cun70wjwfd2wt" path="res://friendly/main_char/Olivia.png" id="1_dodjh"]
-[ext_resource type="Script" path="res://friendly/main_char/olivia.gd" id="1_yj1ot"]
-
-[node name="Olivia" type="Sprite2D"]
-texture = ExtResource("1_dodjh")
-offset = Vector2(0, -8)
-script = ExtResource("1_yj1ot")

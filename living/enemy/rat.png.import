@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diecd3i7yohun"
-path="res://.godot/imported/Teddy.png-01ae7ce83570bd5c98c95b17ed7812ce.ctex"
+uid="uid://bodb8147gotrw"
+path="res://.godot/imported/rat.png-6c3655b3c631eab444961033167e5003.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://friendly/plush/Teddy.png"
-dest_files=["res://.godot/imported/Teddy.png-01ae7ce83570bd5c98c95b17ed7812ce.ctex"]
+source_file="res://living/enemy/rat.png"
+dest_files=["res://.godot/imported/rat.png-6c3655b3c631eab444961033167e5003.ctex"]
 
 [params]
 
