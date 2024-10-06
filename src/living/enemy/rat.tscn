@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0g1ek12cq64"]
+[gd_scene load_steps=13 format=3 uid="uid://c0g1ek12cq64"]
 
 [ext_resource type="Texture2D" uid="uid://bodb8147gotrw" path="res://living/enemy/rat.png" id="1_1quh2"]
-[ext_resource type="Script" path="res://living/enemy/rat.gd" id="1_iabdb"]
+[ext_resource type="Script" path="res://living/enemy/enemy.gd" id="1_iabdb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xw6t4"]
 atlas = ExtResource("1_1quh2")
@@ -82,9 +82,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Rat" type="AnimatedSprite2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5aeeq"]
+size = Vector2(10, 8)
+
+[node name="Rat" type="AnimatedSprite2D" groups=["enemies"]]
 sprite_frames = SubResource("SpriteFrames_pb106")
-animation = &"walk_down"
-frame = 1
-frame_progress = 0.754148
+animation = &"walk_left"
 script = ExtResource("1_iabdb")
+
+[node name="Hitbox" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_5aeeq")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

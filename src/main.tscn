@@ -9,13 +9,109 @@
 y_sort_enabled = true
 script = ExtResource("1_rhcqh")
 
-[node name="Olivia" parent="." instance=ExtResource("2_bqlnl")]
+[node name="Olivia" parent="." groups=["allies"] instance=ExtResource("2_bqlnl")]
 position = Vector2(16, 16)
 
-[node name="Teddy" parent="." instance=ExtResource("3_ukfjp")]
+[node name="Teddy" parent="." groups=["allies"] instance=ExtResource("3_ukfjp")]
 position = Vector2(6, 14)
 
 [node name="Rat" parent="." instance=ExtResource("4_xm2cn")]
 position = Vector2(113, 44)
+
+[node name="Rat2" parent="." instance=ExtResource("4_xm2cn")]
+position = Vector2(39, 56)
+
+[node name="Teddy2" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(242, 130)
+
+[node name="Teddy3" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(104, 119)
+
+[node name="Teddy4" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(174, 88)
+
+[node name="Teddy5" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(52, 180)
+
+[node name="Teddy6" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(139, 157)
+
+[node name="Teddy7" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(228, 79)
+
+[node name="Teddy8" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(42, 115)
+
+[node name="Teddy9" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(80, 87)
+
+[node name="Teddy10" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(80, 42)
+
+[node name="Teddy11" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(138, 39)
+
+[node name="Teddy12" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(137, 88)
+
+[node name="Teddy13" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(150, 124)
+
+[node name="Teddy14" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(187, 125)
+
+[node name="Teddy15" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(89, 148)
+
+[node name="Teddy16" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(185, 171)
+
+[node name="Teddy17" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(91, 180)
+
+[node name="Teddy18" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(21, 91)
+
+[node name="Teddy19" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(26, 156)
+
+[node name="Teddy20" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(133, 181)
+
+[node name="Teddy21" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(236, 163)
+
+[node name="Teddy22" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(215, 95)
+
+[node name="Teddy23" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(166, 58)
+
+[node name="Teddy24" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(116, 70)
+
+[node name="Teddy25" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(70, 126)
+
+[node name="Teddy26" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(58, 74)
+
+[node name="Teddy27" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(41, 33)
+
+[node name="Teddy28" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(199, 48)
+
+[node name="Teddy29" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(227, 50)
+
+[node name="Teddy30" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(270, 75)
+
+[node name="Teddy31" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(267, 115)
+
+[node name="Teddy32" parent="." instance=ExtResource("3_ukfjp")]
+position = Vector2(294, 164)
 
 [connection signal="move_controlled" from="." to="Olivia" method="_on_move_controlled"]

@@ -15,6 +15,10 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+World="*res://world.gd"
+
 [display]
 
 window/size/viewport_width=384
@@ -23,6 +27,10 @@ window/size/window_width_override=1152
 window/size/window_height_override=648
 window/stretch/mode="viewport"
 window/dpi/allow_hidpi=false
+
+[global_group]
+
+enemies="The entity is an enemy"
 
 [input]
 

@@ -1,11 +1,11 @@
 extends Node2D
+class_name Main
 
 signal move_controlled(vect : Vector2)
 
 
 func _ready() -> void:
 	var teddy : Plush = $Teddy
-	teddy.leader = $Olivia
 
 
 func _physics_process(delta: float) -> void:

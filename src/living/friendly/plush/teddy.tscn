@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dno5lfk65lty1"]
+[gd_scene load_steps=48 format=3 uid="uid://dno5lfk65lty1"]
 
 [ext_resource type="Texture2D" uid="uid://diecd3i7yohun" path="res://living/friendly/plush/teddy.png" id="1_44m8h"]
 [ext_resource type="Script" path="res://living/friendly/plush/plush.gd" id="2_s1e4r"]
@@ -184,7 +184,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_66ahq")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_down",
 "speed": 5.0
 }, {
@@ -207,7 +207,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0xfl6")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_left",
 "speed": 5.0
 }, {
@@ -230,7 +230,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bbrof")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_right",
 "speed": 5.0
 }, {
@@ -253,7 +253,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h6lrn")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_up",
 "speed": 5.0
 }, {
@@ -358,9 +358,58 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uymu5"]
+size = Vector2(14, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4mho"]
+size = Vector2(7, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0dis"]
+size = Vector2(14, 7.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1thfl"]
+radius = 4.03113
+
 [node name="Teddy" type="AnimatedSprite2D"]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_u8d0s")
-animation = &"walk_up"
-frame_progress = 0.0644988
+animation = &"attack_left"
 script = ExtResource("2_s1e4r")
+
+[node name="Attack" type="Area2D" parent="."]
+input_pickable = false
+monitoring = false
+
+[node name="Down" type="CollisionShape2D" parent="Attack"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_uymu5")
+disabled = true
+
+[node name="Left" type="CollisionShape2D" parent="Attack"]
+position = Vector2(-4.5, 1)
+shape = SubResource("RectangleShape2D_y4mho")
+disabled = true
+
+[node name="Right" type="CollisionShape2D" parent="Attack"]
+position = Vector2(4.5, 1.5)
+shape = SubResource("RectangleShape2D_y4mho")
+disabled = true
+
+[node name="Up" type="CollisionShape2D" parent="Attack"]
+position = Vector2(0, 0.75)
+shape = SubResource("RectangleShape2D_n0dis")
+disabled = true
+
+[node name="Occupy" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+input_pickable = false
+
+[node name="Body" type="CollisionShape2D" parent="Occupy"]
+position = Vector2(0, 3.5)
+shape = SubResource("CircleShape2D_1thfl")
+
+[connection signal="animation_finished" from="." to="." method="_on_attack_finished"]
+[connection signal="frame_changed" from="." to="." method="_on_frame_changed"]
+[connection signal="area_entered" from="Occupy" to="." method="_on_occupy_area_entered"]
+[connection signal="area_exited" from="Occupy" to="." method="_on_occupy_area_exited"]

@@ -2,7 +2,12 @@ extends AnimatedSprite2D
 class_name  Living
 
 var facing := Vector2.DOWN
-
+var max_hp := 4
+var health := 4:
+	get:
+		return health
+	set(value):
+		health = clamp(value, 0, max_hp)
 
 func  walk_direction(vect : Vector2) -> void:
 	var vect2 := vect.abs()
